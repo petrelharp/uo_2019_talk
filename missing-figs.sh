@@ -32,16 +32,18 @@ do
 done
 
 
-SOURCEDIR="/home/peter/teaching/talks/madison-sept-2018"
-for x in $(echo $MISSING)
-do 
-    if [ -e ${SOURCEDIR}/$x ]
-    then
-        mkdir -p $(dirname $x)
-        cp ${SOURCEDIR}/$x $(dirname $x)
-    elif [ -e $SOURCEDIR/$(basename ${x%.png}.pdf) ]
-    then
-        mkdir -p $(dirname $x)
-        cp $SOURCEDIR/$(basename ${x%.png}.pdf) $(dirname $x) 
-    fi
+for SOURCEDIR in "/home/peter/teaching/talks/idaho-march-2019" "/home/peter/teaching/talks/madison-sept-2018" "/home/peter/teaching/talks/france-may-2019"
+do
+    for x in $(echo $MISSING)
+    do 
+        if [ -e ${SOURCEDIR}/$x ]
+        then
+            mkdir -p $(dirname $x)
+            cp ${SOURCEDIR}/$x $(dirname $x)
+        elif [ -e $SOURCEDIR/$(basename ${x%.png}.pdf) ]
+        then
+            mkdir -p $(dirname $x)
+            cp $SOURCEDIR/$(basename ${x%.png}.pdf) $(dirname $x) 
+        fi
+    done
 done
