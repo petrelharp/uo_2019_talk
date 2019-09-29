@@ -52,7 +52,7 @@ Howes et al 2013)
 ## A nice story about mice.
 
 ![volcanic outcrops: mice by AH Harris](figs/volcanic-outcrops-plus-mice.png)
-![mice from Hoekstra](figs/hoekstra_cutemice.pdf)
+![mice from Hoekstra](figs/hoekstra_cutemice.png)
 
 - Dark-pigmented mammals and reptiles on volcanic outcrops in the Southwest. (Dice, Benson 1936)
 - 'Dark' allele beneficial on outcrops, deleterious elsewhere. 
@@ -340,17 +340,9 @@ linked selection
 12. All of the above?
 
 
-<!-- 1. explain tree sequences and why they are so efficient (5min) -->
+<!-- Tree sequences -->
 
 # The tree sequence
-
----------------
-
-![](figs/treseq_preprint.png)
-
----------------
-
-![](figs/treseq_preprint_peeps.png)
 
 
 ## History is a sequence of trees
@@ -368,19 +360,18 @@ that says how they are related.
 
 A **tree sequence** describes this, er, sequence of trees.
 
-<!--
-. . .
 
-*Observations:*
+---------------
 
-1. The *pedigree* (parental relationships) plus crossover locations
-    would give us the tree sequence for *everyone, ever*.
+![genotypes](figs/ts_ex/tree_sequence_genotypes.png)
 
-2. Much less can fully describe the history relevant to a *sample* of genomes.
+---------------
 
-3. This information is equivalent to the Ancestral Recombination Graph (ARG).
--->
+![genotypes and a tree](figs/ts_ex/tree_sequence_genotype_and_tree.png)
 
+---------------
+
+![genotypes and the next tree](figs/ts_ex/tree_sequence_next_genotype_and_tree.png)
 
 -------------
 
@@ -414,117 +405,122 @@ simulated human-like chromosome (100 megabases) for up to 10 billion haploid
 using msprime [Kelleher et al., 2016], and the sizes of the resulting files plotted
 (points). -->
 
+---------------
 
-## Example: three samples; two trees; two variant sites
+![](figs/treseq_preprint.png)
 
-![Example tree sequence](figs/example_tree_sequence.png)
+---------------
 
-
-
-## Nodes and edges
-
-Edges 
-
-:   Who inherits from who; only *necessary* for coalescent events.
-
-    Records: interval (left, right); parent node; child node.
-
-Nodes 
-
-:   The ancestors those happen in.
-
-    Records: time ago (of birth); ID (implicit).
-
--------------------
-
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.0.png)
-
--------------------
+![](figs/treseq_preprint_peeps.png)
 
 
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.1.png)
+##
 
--------------------
-
-
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.2.png)
-
--------------------
+**What do genotypes tell us about the genealogies?**
 
 
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.3.png)
+## Summaries of genotypes and genealogies
 
--------------------
+::: {.columns}
+:::::: {.column width=47%}
+
+*Genotypes:*
+
+1. For each site,
+2. look at who has which alleles,
+3. and add a *summary* of these values to our running total.
+
+*Example:*
+sequence divergence
+counts how many mutations differ between two sequences.
+
+:::
+:::::: {.column width=5%}
+
+:::
+:::::: {.column width=47%}
+
+<!-- nothing til next slide -->
+
+:::
+::::::
+
+## It's fast!
+
+![efficiency of treestat computation](figs/treestats/benchmarks_without_copy_longer_genome.png){width=80%}
+
+## Summaries of genotypes and genealogies
+
+::: {.columns}
+:::::: {.column width=47%}
+
+*Genotypes:*
+
+1. For each site,
+2. look at who has inherited which alleles,
+3. and add a *summary* of these values to the running total.
+
+*Example:*
+sequence divergence
+counts how many mutations differ between two sequences.
+
+:::
+:::::: {.column width=5%}
+
+:::
+:::::: {.column width=47%}
+
+*Trees:*
+
+1. For each branch,
+2. look at who would inherit mutations on that branch,
+3. and add the *expected contribution* to the running total.
+
+*Example:*
+the mean time to most recent common ancestor between two sequences.
+
+:::
+::::::
+
+##
+
+![site and branch stats](figs/ts_ex/tree_sequence_site_and_branch.png)
 
 
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.4.png)
+## Math moment: duality
 
--------------------
+Any set of *sample weights* $w$ and *summary function* $f$
+defines both
 
+- a statistic of genotypes, $\text{Site}(f,w)$, and
+- a statistic of genealogies, $\text{Branch}(f,w)$.
 
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.5.png)
+. . .
 
--------------------
+With genealogies *fixed*, and averaging only over *mutations* with rate $\mu$,
+$$\begin{equation}
+    \text{Branch}(f, w) = \frac{1}{\mu} \mathbb{E}\left[ \text{Site}(f, w) \right] .
+\end{equation}$$
 
-![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.6.png)
+. . .
 
+Dealing directly with genealogies can
+*remove the layer of noise due to mutation*.
 
-## Sites and mutations
+## Duality, in 1000 Genomes data
 
-Mutations
-
-:   When state changes along the tree.
-
-    Records: site it occured at; node it occurred in; derived state.
-
-Sites 
-
-:   Where mutations fall on the genome.
-
-    Records: genomic position; ancestral (root) state; ID (implicit).
+![duality in 1000G data](figs/treestats/relate_chr20_site_div_branch.1000000.diversity.png){width=75%}
 
 
-------------------
+# Application to demographic inference
 
-![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.0.png)
+## 
 
-------------------
+![](figs/ibc/coal-hitting-time-diagram_just-coal.png)
 
-![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.1.png)
+##
 
-------------------
-
-![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.2.png)
-
-------------------
-
-![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.3.png)
-
-------------------
-
-![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.4.png)
-
-
-
-# Describing tree sequences
-
-## A general schema for popgen statistics
-
-describe weighting/summarizing scheme
-
-## Efficient computation
-
-speed plot
-
-## Duality with branch statistics
-
-explain
-
-math
-
-## Duality, in practice?
-
-1000G duality
+![](figs/ibc/grid_populus_map.png)
 
 
 # Application to genomic simulations
@@ -661,3 +657,96 @@ This produces **waaaaay** too much data.
 ##
 
 Thanks!!
+
+# An example tree sequence
+
+## Example: three samples; two trees; two variant sites
+
+![Example tree sequence](figs/example_tree_sequence.png)
+
+
+
+## Nodes and edges
+
+Edges 
+
+:   Who inherits from who; only *necessary* for coalescent events.
+
+    Records: interval (left, right); parent node; child node.
+
+Nodes 
+
+:   The ancestors those happen in.
+
+    Records: time ago (of birth); ID (implicit).
+
+-------------------
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.0.png)
+
+-------------------
+
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.1.png)
+
+-------------------
+
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.2.png)
+
+-------------------
+
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.3.png)
+
+-------------------
+
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.4.png)
+
+-------------------
+
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.5.png)
+
+-------------------
+
+![Building a tree sequence](figs/nodes_edges_walkthrough/nodes_edges_walkthrough.6.png)
+
+
+## Sites and mutations
+
+Mutations
+
+:   When state changes along the tree.
+
+    Records: site it occured at; node it occurred in; derived state.
+
+Sites 
+
+:   Where mutations fall on the genome.
+
+    Records: genomic position; ancestral (root) state; ID (implicit).
+
+
+------------------
+
+![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.0.png)
+
+------------------
+
+![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.1.png)
+
+------------------
+
+![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.2.png)
+
+------------------
+
+![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.3.png)
+
+------------------
+
+![Adding mutations](figs/sites_muts_walkthrough/sites_muts_walkthrough.4.png)
+
+
