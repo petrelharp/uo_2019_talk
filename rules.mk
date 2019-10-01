@@ -17,6 +17,8 @@ else
 	PANDOC_OPTS += -H .pandoc.$(LATEX_MACROS)
 endif
 
+setup : .pandoc.$(LATEX_MACROS) 
+
 .pandoc.$(LATEX_MACROS) : $(LATEX_MACROS)
 	(echo '<div style="display: none">'; echo '\['; cat $(LATEX_MACROS); echo '\]'; echo '</div>') > $@
 

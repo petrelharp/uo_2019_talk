@@ -10,7 +10,48 @@ date: "University of Oregon // October 2019"
 
 ## 
 
-people
+:::: {.columns}
+:::::::: {.column width=50%}
+
+Students/postdocs/researchers:
+
+- Josh Schiffman
+- Erik Lundgren
+- Han Li
+- Jessica Crisci
+- Jaime Ashander
+- Matt Lukac
+- Jared Galloway
+
+Funding:
+
+ - NSF DBI
+ - Sloan foundation
+
+::::
+:::::::: {.column width=50%}
+
+Other collaborators:
+
+- Graham Coop
+- Alison Etheridge
+- Brad Shaffer
+- Gideon Bradburd
+- Matt Dean
+- Jerome Kelleher
+- Ben Haller
+- Andy Kern
+- CJ Battey
+- Anastasia Teterina
+- Patrick Phillips
+- Katja Kasimatis
+- Bill Cresko
+- Matt Streisfeld
+- Madeline Chase
+- Sean Stankowski
+
+::::
+::::::::
 
 ## Outline of the talk
 
@@ -32,7 +73,7 @@ Human sickle-cell allele (HbS):
 (Currat et al 2002)
 
 - Single base substitution
-- provide protection against malaria 
+- provides protection against malaria 
   (but deleterious in homozygotes)
 
 ## G6PD deficiency allele frequencies
@@ -49,20 +90,24 @@ Howes et al 2013)
 - Estimated ages 40-400 generations
 
 
-## A nice story about mice.
+## 
 
-![volcanic outcrops: mice by AH Harris](figs/volcanic-outcrops-plus-mice.png)
-![mice from Hoekstra](figs/hoekstra_cutemice.png)
+![volcanic outcrops: mice by AH Harris](figs/volcanic-outcrops-plus-mice.png){width=80%}
 
 - Dark-pigmented mammals and reptiles on volcanic outcrops in the Southwest. (Dice, Benson 1936)
 - 'Dark' allele beneficial on outcrops, deleterious elsewhere. 
 - MC1R: basis is shared *between species* but not *between populations* (Nachman, Hoekstra)
 
-## Habitat is often patchy.
+## 
 
-![OR geology](figs/oregon_geological_map.png)
+1. How much genetic variation typically underlies traits?
 
-## mimulus serpentine
+2. How important is natural selection in determining genetic diversity?
+
+3. How will species adapt to changes in the future?
+
+
+## {data-background-image="figs/oregon_geological_map.png"}
 
 
 # Genomic landscapes
@@ -90,12 +135,46 @@ Howes et al 2013)
 ::::
 ::::::::
 
+--------------
+
+linked selection
+
+: The indirect effects of selection on genomic locations
+  that are *linked* to the sites under selection by a lack of recombination.
+
+::: {.centered}
+
+![](figs/sweep_haps.png){.fragment width="40%"}
+![](figs/background_haps.png){.fragment width="40%"}
+
+:::
+
+
 
 ## The *Mimulus aurantiacus* species complex
 
+:::: {.columns}
+:::::::: {.column width=60%}
+
+![](figs/aurantiacus/just_phylogeny.png)
+
+::::
+:::::::: {.column width=40%}
+
+::::::::::: {.caption}
+From *Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers*,
+Sean Stankowski, Madeline A. Chase, Allison M. Fuiten, Murillo F. Rodrigues, Peter L. Ralph, and Matthew A. Streisfeld;
+PLoS Bio 2019.
+:::::::::::
+
 ::: {.centered}
-![](figs/aurantiacus/just_phylogeny.png){ width="60%" }
+![sean stankowski](figs/sean_stan.jpeg){width=45%}
+![madeline chase](figs/madeline_chase.jpeg){width=45%}
+![matt streisfeld](figs/matt_streis.jpeg){width=50%}
 :::
+
+::::
+::::::::
 
 --------------------------
 
@@ -221,27 +300,12 @@ Howes et al 2013)
 
 
 
-----------------------------------
-
-![https://www.biorxiv.org/content/early/2018/06/21/342352](figs/aurantiacus/preprint.png)
-
-----------------------------------
-
-![https://www.biorxiv.org/content/early/2018/06/21/342352](figs/aurantiacus/preprint_peeps.png)
-
-
-##
-
-What forces create and maintain these genetic landscapes of diversity?
-
-
 ##
 
 $$
 \begin{aligned}
-\pi &= \text{ (within-pop diversity) } \\
-d_{xy} &= \text{ (between-pop divergence) }
-% F_{ST} &= \text{ (relative differentiation) }
+\pi &= \text{ (within-pop genetic distance) } \\
+d_{xy} &= \text{ (between-pop genetic distance) }
 \end{aligned}
 $$
 
@@ -250,95 +314,6 @@ $$
 ![](figs/fst_tree.png){width=60%}
 
 :::
-
-<!-- section THEORY -->
-
-# Linked selection, in theory
-
---------------
-
-linked selection
-
-: The indirect effects of selection on genomic locations
-  that are *linked* to the sites under selection by a lack of recombination.
-
-::: {.centered}
-
-![](figs/sweep_haps.png){.fragment width="40%"}
-![](figs/background_haps.png){.fragment width="40%"}
-
-:::
-
---------------------
-
-**Linked Selection: a field guide**
-
-*composed of rough sketches*
-
-. . .
-
-*citations: numerous*
-
-0. Neutrality
--------------
-
-![](figs/linked-selection-guide/linked-selection-site-neutral_early.png)
-
-0. Neutrality
--------------
-
-![](figs/linked-selection-guide/linked-selection-site-neutral.png)
-
-
-1. A "hard" sweep
------------------
-
-![](figs/linked-selection-guide/linked-selection-site-hard.png)
-
-2. A "soft" sweep
------------------
-
-![](figs/linked-selection-guide/linked-selection-site-soft.png)
-
-3. Adaptive introgression
--------------------------
-
-![](figs/linked-selection-guide/linked-selection-site-introgression.png)
-
-4. Local adaptation with gene flow
--------------------
-
-![](figs/linked-selection-guide/linked-selection-site-local_adaptation.png)
-
-<!-- [Bierne 2010](https://doi.org/10.1111%2fj.1558-5646.2010.01050.x) -->
-
-5. Background selection
------------------------
-
-![](figs/linked-selection-guide/linked-selection-region-background.png)
-
-6. Recurrent sweeps
--------------------
-
-![](figs/linked-selection-guide/linked-selection-region-recurrent_sweeps.png)
-
-7. Recurrent introgression
---------------------------
-
-![](figs/linked-selection-guide/linked-selection-region-recurrent_introgression.png)
-
-## Etcetera
-
-8. Recent balanching selection
-
-9. Long-term balancing selection
-
-10. Recurrent local adaptation after a split
-
-11. Recurrent, transient balancing selection
-
-12. All of the above?
-
 
 <!-- Tree sequences -->
 
@@ -353,12 +328,12 @@ that says how they are related.
 
 . . .
 
-![Trees along a chromosome](figs/sim_ts.anim.gif)
+![Trees along a chromosome](figs/ts_ex/sim_ts.anim.gif){width=100%}
 
 
 ----------------------
 
-A **tree sequence** describes this, er, sequence of trees.
+The **tree sequence** is a way to describe this, er, sequence of trees.
 
 
 ---------------
@@ -379,25 +354,30 @@ A **tree sequence** describes this, er, sequence of trees.
 introduced the **tree sequence** data structure
 for a fast coalescent simulator, [msprime](https://github.com/jeromekelleher/msprime).
 
-- stores sequence *and* genealogical data
-
-- tree differences allow **very** efficient
-
-    * subsetting
-    * calculation of allele frequencies in arbitrary cohorts
-    * linkage disequilibrium
-    * log-time haplotype matching
+- stores sequence *and* genealogical data **very** efficiently
 
 - tree-based sequence storage closely related to haplotype-matching compression
 
+- python/C [`tskit`](https://github.com/tskit-dev/tskit) tools
 
-## Simulated file sizes
+::: {.floatright}
+![jerome kelleher](figs/jerome.jpeg){width=50%}
+
+:::: {.caption}
+jerome kelleher
+::::
+
+:::
+
+## File sizes
 
 ::: {.centered}
 ![file sizes](figs/tsinfer_sizes.png){width=90%}
 :::
 
-from *Kelleher et al 2018, *Inferring the ancestry of everyone"*
+::: {.caption}
+from [Kelleher et al 2018, *Inferring whole-genome histories in large population datasets*](https://www.nature.com/articles/s41588-019-0483-y), Nature Genetics
+:::
 
 <!-- Estimated sizes of files required to store the genetic variation data for a
 simulated human-like chromosome (100 megabases) for up to 10 billion haploid
@@ -405,14 +385,15 @@ simulated human-like chromosome (100 megabases) for up to 10 billion haploid
 using msprime [Kelleher et al., 2016], and the sizes of the resulting files plotted
 (points). -->
 
----------------
+## Computation run time
 
-![](figs/treseq_preprint.png)
+::: {.centered}
+![efficiency of treestat computation](figs/treestats/benchmarks_without_copy_longer_genome.png){width=70%}
+:::
 
----------------
-
-![](figs/treseq_preprint_peeps.png)
-
+::: {.caption}
+from [Ralph, Thornton and Kelleher 2019, *Efficiently summarizing relationships in large samples*](https://www.biorxiv.org/content/10.1101/779132v1?rss=1), bioRxiv
+:::
 
 ##
 
@@ -444,10 +425,6 @@ counts how many mutations differ between two sequences.
 
 :::
 ::::::
-
-## It's fast!
-
-![efficiency of treestat computation](figs/treestats/benchmarks_without_copy_longer_genome.png){width=80%}
 
 ## Summaries of genotypes and genealogies
 
@@ -499,32 +476,92 @@ defines both
 
 With genealogies *fixed*, and averaging only over *mutations* with rate $\mu$,
 $$\begin{equation}
-    \text{Branch}(f, w) = \frac{1}{\mu} \mathbb{E}\left[ \text{Site}(f, w) \right] .
+    \text{Branch}(f, w) = \frac{1}{\mu} \E\left[ \text{Site}(f, w) \right] .
 \end{equation}$$
 
 . . .
 
 Dealing directly with genealogies can
-*remove the layer of noise due to mutation*.
+*remove the layer of noise due to mutation*:
+$$\begin{equation}
+    \frac{1}{\mu^2} \var\left[\text{Site}(f,w)\right]
+    =
+    \var\left[\text{Branch}(f,w)\right]
+    +
+    \frac{1}{n}
+    \E\left[\text{Branch}(f^2,w)\right]
+\end{equation}$$
 
-## Duality, in 1000 Genomes data
+## 
 
-![duality in 1000G data](figs/treestats/relate_chr20_site_div_branch.1000000.diversity.png){width=75%}
+:::: {.columns}
+:::::::: {.column width=60%}
 
+
+![duality in 1000G data](figs/treestats/relate_chr20_site_div_branch.1000000.diversity.png){width=100%}
+
+:::
+:::::::: {.column width=40%}
+
+Duality, on 1000 Genomes data? Not quite...
+
+- variation in mutation rate?
+- selection?
+- inference artifacts?
+
+::: {.caption}
+*Tree sequence from [Speidel et al 2019](https://www.nature.com/articles/s41588-019-0484-x).*
+:::
+
+:::
+::::::::
 
 # Application to demographic inference
 
 ## 
 
-![](figs/ibc/coal-hitting-time-diagram_just-coal.png)
+:::: {.columns}
+:::::::: {.column width=50%}
 
-##
+![](figs/ibc/coal-hitting-time-diagram_just-coal.png){width=80%}
 
-![](figs/ibc/grid_populus_map.png)
+::::
+:::::::: {.column width=50%}
 
+Erik Lundgren: "Isolation By Coalescence"
+
+- fits a discrete random walk model to *lineage movement*
+- genetic distance $\approx$ mean *coalescence time*
+
+::: {.caption}
+From [Lundgren and Ralph, 2019, *Are populations like a circuit?*](https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13035)
+:::
+
+::::
+::::::::
+
+## 
+
+
+
+:::: {.columns}
+:::::::: {.column width=70%}
+
+![](figs/ibc/grid_populus_map.png){width=100%}
+
+:::
+:::::::: {.column width=30%}
+
+*Populus trichocarpa* and *P. balsamifera* data from
+[Moreno Geraldes et al 2014](https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.12497)
+
+- glacial refugia
+- postglacial expansion
+
+:::
+::::::::
 
 # Application to genomic simulations
-
 
 ## The main idea
 
@@ -539,6 +576,31 @@ Since neutral mutations don't affect demography,
 
 this is *equivalent* to having kept track of them throughout.
 
+. . .
+
+:::: {.columns}
+:::::::: {.column width=50%}
+
+:::: {.caption}
+From 
+Kelleher, Thornton, Ashander, and Ralph 2018,
+[Efficient pedigree recording for fast population genetics simulation](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006581).
+
+and Haller, Galloway, Kelleher, Messer, and Ralph 2018,
+[*Tree‐sequence recording in SLiM opens new horizons for forward‐time simulation of whole genomes*](https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12968)
+:::
+
+::::
+:::::::: {.column width=50%}
+
+::: {.floatright}
+![jared galloway](figs/jared.jpeg){width=35%}
+![jaime ashander](figs/jaime.jpg){width=30%}
+:::
+
+::::
+::::::::
+
 ------------
 
 This means recording the entire genetic history of **everyone** in the population, **ever**.
@@ -547,53 +609,20 @@ This means recording the entire genetic history of **everyone** in the populatio
 
 It is *not* clear this is a good idea.
 
-
-## Tree recording strategy
-
-Every time an individual is born, we must:
-
-::: incremental
-
-1. add each contributing gamete to the Node Table,
-2. add entries to the Edge Table
-    recording which parental copy each inherited each bit of genome from, and
-3. add any new non-neutral mutations to the Mutation Table 
-    and (if necessary) their locations to the Site Table.
-
-:::
-
 . . .
 
-::: {.columns}
-:::::: {.column width=15%}
+But, with a few tricks...
 
-![Rightarrow](figs/finger_right.png){width="100%"}
-
-:::
-:::::: {.column width=5%}
-
-:::
-:::::: {.column width=75%}
-
-This produces **waaaaay** too much data.
-
-:::
-::::::
-
-## ... and, tree sequence recording!
-
-
-![](figs/slim_preprint_peeps.png)
 
 
 ## A 100x speedup:
 
 ::: {.centered}
-![](figs/slim_timing.png){width=60%}
+![](figs/slim_timing.png){width=100%}
 :::
 
 
-## What else can you do with the tree sequence?
+## What else can you do with tree sequences?
 
 > - record ancient samples 
 > - true ancestry reconstruction 
@@ -619,7 +648,19 @@ This produces **waaaaay** too much data.
 
 ## The data
 
-![](figs/aurantiacus/divergence_by_node_LG1.png)
+:::: {.columns}
+:::::::: {.column width=80%}
+
+![](figs/aurantiacus/rising_landscapes/divergence_by_node_puniceus_LG3.png)
+
+::::
+:::::::: {.column width=20%}
+
+![](figs/aurantiacus/labeled_phylogeny_puniceus.png){width="250%"}
+
+::::
+::::::::
+
 
 ## Simulations
 
@@ -645,11 +686,8 @@ This produces **waaaaay** too much data.
 
 ------------------
 
-![](figs/aurantiacus/murillo_neutral.png)
 
-------------------
-
-![](figs/aurantiacus/murillo_selected.png)
+![](figs/aurantiacus/sim_results.png)
 
 
 # Wrap-up
