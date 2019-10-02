@@ -8,6 +8,12 @@ date: "University of Oregon // October 2019"
 
 # Outline
 
+## Outline of the talk
+
+1. Big picture
+2. Tools
+3. Applications
+
 ## 
 
 :::: {.columns}
@@ -15,51 +21,52 @@ date: "University of Oregon // October 2019"
 
 Students/postdocs/researchers:
 
+- Matt Lukac
+- Murillo Rodrigues 
+- Jared Galloway
+- Jaime Ashander
 - Josh Schiffman
 - Erik Lundgren
 - Han Li
 - Jessica Crisci
-- Jaime Ashander
-- Matt Lukac
-- Jared Galloway
 
 Funding:
 
- - NSF DBI
- - Sloan foundation
+- NSF DBI
+- Sloan foundation
+- UO Data Science
 
 ::::
 :::::::: {.column width=50%}
 
+<div style="font-size: 85%; margin-top: -40px;">
+
 Other collaborators:
 
-- Graham Coop
-- Alison Etheridge
-- Brad Shaffer
-- Gideon Bradburd
-- Matt Dean
-- Jerome Kelleher
-- Ben Haller
-- Andy Kern
 - CJ Battey
-- Anastasia Teterina
-- Patrick Phillips
-- Katja Kasimatis
-- Bill Cresko
-- Matt Streisfeld
+- Gideon Bradburd
+- Yaniv Brandvain
 - Madeline Chase
+- Graham Coop
+- Bill Cresko
+- Matt Dean
+- Alison Etheridge
+- Ben Haller
+- Katja Kasimatis
+- Jerome Kelleher
+- Andy Kern
+- Evan McCartney-Melstad
+- Patrick Phillips
+- Alisa Sedghifar
+- Brad Shaffer
 - Sean Stankowski
+- Matt Streisfeld
+- Anastasia Teterina
+
+</div>
 
 ::::
 ::::::::
-
-## Outline of the talk
-
-1. Big picture: adaptation, and genomes
-2. Big questions: genomic landscapes
-3. Pattern *and* process: tree sequences
-4. Simulation: the flexible tool
-5. Back to the landscapes
 
 
 # Adaptation, and genetic variation
@@ -100,14 +107,8 @@ Howes et al 2013)
 
 ## 
 
-1. How much genetic variation typically underlies traits?
+How generalizable is this?
 
-2. How important is natural selection in determining genetic diversity?
-
-3. How will species adapt to changes in the future?
-
-
-## {data-background-image="figs/oregon_geological_map.png"}
 
 
 # Genomic landscapes
@@ -315,6 +316,43 @@ $$
 
 :::
 
+# Some questions
+
+##
+
+<!--
+We need better understanding and prediction of how
+
+1. genotype maps to phenotype,
+2. natural selection acts on phenotypes,
+3. and that affects genetic variation.
+-->
+
+
+How much genetic variation typically underlies traits?
+
+. . .
+
+How important is natural selection in determining genetic diversity?
+
+. . .
+
+How will populations respond to changes in the future?
+
+. . .
+
+To test theories and fit models, we need *simulations* with realistic
+
+1. population sizes,
+2. genomes,
+3. selective pressures,
+4. histories, and
+5. geography.
+
+
+## {data-background-image="figs/oregon_geological_map.png"}
+
+
 <!-- Tree sequences -->
 
 # The tree sequence
@@ -400,6 +438,11 @@ from [Ralph, Thornton and Kelleher 2019, *Efficiently summarizing relationships 
 **What do genotypes tell us about the genealogies?**
 
 
+::: {.caption}
+also from [Ralph, Thornton and Kelleher 2019, *Efficiently summarizing relationships in large samples*](https://www.biorxiv.org/content/10.1101/779132v1?rss=1), bioRxiv
+:::
+
+
 ## Summaries of genotypes and genealogies
 
 ::: {.columns}
@@ -412,7 +455,7 @@ from [Ralph, Thornton and Kelleher 2019, *Efficiently summarizing relationships 
 3. and add a *summary* of these values to our running total.
 
 *Example:*
-sequence divergence
+genetic distance
 counts how many mutations differ between two sequences.
 
 :::
@@ -464,7 +507,7 @@ the mean time to most recent common ancestor between two sequences.
 ![site and branch stats](figs/ts_ex/tree_sequence_site_and_branch.png)
 
 
-## Math moment: duality
+## Duality
 
 Any set of *sample weights* $w$ and *summary function* $f$
 defines both
@@ -506,6 +549,7 @@ $$\begin{equation}
 Duality, on 1000 Genomes data? Not quite...
 
 - variation in mutation rate?
+- biased gene conversion?
 - selection?
 - inference artifacts?
 
@@ -615,10 +659,14 @@ But, with a few tricks...
 
 
 
-## A 100x speedup:
+## A 100x speedup!
 
-::: {.centered}
-![](figs/slim_timing.png){width=100%}
+<!--
+{data-background-image="figs/slim_timing_no_msprime.png" data-background-size=40% data-background-position=left}
+-->
+
+::: {.floatright}
+![](figs/slim_timing_no_msprime.png){width=70%}
 :::
 
 
@@ -669,7 +717,7 @@ But, with a few tricks...
 
 - $N=10,000$ diploids
 - burn-in for $10N$ generations
-- population split followed by period sampling, with:
+- population split, with either:
     
     * neutral
     * background selection
@@ -678,7 +726,13 @@ But, with a few tricks...
 :::
 ::::::: {.column width="30%"}
 
+:::: {.flushright}
 ![](figs/murillo.jpeg)
+
+::::: {.caption}
+Murillo Rodrigues
+:::::
+::::
 
 :::
 :::::::
@@ -689,12 +743,36 @@ But, with a few tricks...
 
 ![](figs/aurantiacus/sim_results.png)
 
+::::: {.flushright}
+
+::::::::::: {.caption}
+From *Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers*,
+Sean Stankowski, Madeline A. Chase, Allison M. Fuiten, Murillo F. Rodrigues, Peter L. Ralph, and Matthew A. Streisfeld;
+PLoS Bio 2019.
+:::::::::::
+:::::
+
 
 # Wrap-up
 
 ##
 
-Thanks!!
+We need better understanding and prediction of how
+
+1. genotype maps to phenotype,
+2. natural selection acts on phenotypes,
+3. and that affects genetic variation.
+
+To test theories and fit models, we need *simulations* with realistic
+
+1. population sizes,
+2. genomes,
+3. selective pressures,
+4. histories, and
+5. geography.
+
+
+## {data-background-image="figs/guillemots_thanks.png" data-background-position=center data-background-size=50%}
 
 # An example tree sequence
 

@@ -75,56 +75,61 @@
   <p class="date">University of Oregon // October 2019</p>
 </section>
 
-<section><section id="outline" class="title-slide slide level1"><h1>Outline</h1></section><section id="section" class="slide level2">
+<section><section id="outline" class="title-slide slide level1"><h1>Outline</h1></section><section id="outline-of-the-talk" class="slide level2">
+<h2>Outline of the talk</h2>
+<ol type="1">
+<li>Big picture</li>
+<li>Tools</li>
+<li>Applications</li>
+</ol>
+</section><section id="section" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Students/postdocs/researchers:</p>
 <ul>
+<li>Matt Lukac</li>
+<li>Murillo Rodrigues</li>
+<li>Jared Galloway</li>
+<li>Jaime Ashander</li>
 <li>Josh Schiffman</li>
 <li>Erik Lundgren</li>
 <li>Han Li</li>
 <li>Jessica Crisci</li>
-<li>Jaime Ashander</li>
-<li>Matt Lukac</li>
-<li>Jared Galloway</li>
 </ul>
 <p>Funding:</p>
 <ul>
 <li>NSF DBI</li>
 <li>Sloan foundation</li>
+<li>UO Data Science</li>
 </ul>
 </div><div class="column" style="width:50%;">
+<div style="font-size: 85%; margin-top: -40px;">
 <p>Other collaborators:</p>
 <ul>
-<li>Graham Coop</li>
-<li>Alison Etheridge</li>
-<li>Brad Shaffer</li>
-<li>Gideon Bradburd</li>
-<li>Matt Dean</li>
-<li>Jerome Kelleher</li>
-<li>Ben Haller</li>
-<li>Andy Kern</li>
 <li>CJ Battey</li>
-<li>Anastasia Teterina</li>
-<li>Patrick Phillips</li>
-<li>Katja Kasimatis</li>
-<li>Bill Cresko</li>
-<li>Matt Streisfeld</li>
+<li>Gideon Bradburd</li>
+<li>Yaniv Brandvain</li>
 <li>Madeline Chase</li>
+<li>Graham Coop</li>
+<li>Bill Cresko</li>
+<li>Matt Dean</li>
+<li>Alison Etheridge</li>
+<li>Ben Haller</li>
+<li>Katja Kasimatis</li>
+<li>Jerome Kelleher</li>
+<li>Andy Kern</li>
+<li>Evan McCartney-Melstad</li>
+<li>Patrick Phillips</li>
+<li>Alisa Sedghifar</li>
+<li>Brad Shaffer</li>
 <li>Sean Stankowski</li>
+<li>Matt Streisfeld</li>
+<li>Anastasia Teterina</li>
 </ul>
 </div>
 </div>
-</section><section id="outline-of-the-talk" class="slide level2">
-<h2>Outline of the talk</h2>
-<ol type="1">
-<li>Big picture: adaptation, and genomes</li>
-<li>Big questions: genomic landscapes</li>
-<li>Pattern <em>and</em> process: tree sequences</li>
-<li>Simulation: the flexible tool</li>
-<li>Back to the landscapes</li>
-</ol>
+</div>
 </section></section>
 <section><section id="adaptation-and-genetic-variation" class="title-slide slide level1"><h1>Adaptation, and genetic variation</h1></section><section id="sickle-cell-hbs-allele-frequencies" class="slide level2">
 <h2>Sickle-cell (HbS) allele frequencies</h2>
@@ -159,15 +164,9 @@
 </ul>
 </section><section id="section-2" class="slide level2">
 <h2></h2>
-<ol type="1">
-<li><p>How much genetic variation typically underlies traits?</p></li>
-<li><p>How important is natural selection in determining genetic diversity?</p></li>
-<li><p>How will species adapt to changes in the future?</p></li>
-</ol>
-</section><section id="section-3" class="slide level2" data-background-image="figs/oregon_geological_map.png">
-<h2></h2>
+<p>How generalizable is this?</p>
 </section></section>
-<section><section id="genomic-landscapes" class="title-slide slide level1"><h1>Genomic landscapes</h1></section><section id="section-4" class="slide level2">
+<section><section id="genomic-landscapes" class="title-slide slide level1"><h1>Genomic landscapes</h1></section><section id="section-3" class="slide level2">
 <h2></h2>
 <figure>
 <img data-src="figs/from_the_literature/langley-et-al-2012-chr3-pi-and-rho.png" alt="Langley et al 2012" /><figcaption>Langley et al 2012</figcaption>
@@ -243,7 +242,7 @@
 <p><img data-src="figs/aurantiacus/labeled_phylogeny_aura.png" style="width:250.0%" /></p>
 </div>
 </div>
-</section><section id="section-5" class="slide level2">
+</section><section id="section-4" class="slide level2">
 <h2><!--
 ---------------------
 
@@ -285,7 +284,7 @@
 <p><img data-src="figs/aurantiacus/labeled_phylogeny_all.png" style="width:250.0%" /></p>
 </div>
 </div>
-</section><section id="section-6" class="slide level2">
+</section><section id="section-5" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \begin{aligned}
@@ -296,6 +295,35 @@ d_{xy} &amp;= \text{ (between-pop genetic distance) }
 <div class="centered">
 <p><img data-src="figs/fst_tree.png" style="width:60.0%" /></p>
 </div>
+</section></section>
+<section><section id="some-questions" class="title-slide slide level1"><h1>Some questions</h1></section><section id="section-6" class="slide level2">
+<h2></h2>
+<!--
+We need better understanding and prediction of how
+
+1. genotype maps to phenotype,
+2. natural selection acts on phenotypes,
+3. and that affects genetic variation.
+-->
+<p>How much genetic variation typically underlies traits?</p>
+<div class="fragment">
+<p>How important is natural selection in determining genetic diversity?</p>
+</div>
+<div class="fragment">
+<p>How will populations respond to changes in the future?</p>
+</div>
+<div class="fragment">
+<p>To test theories and fit models, we need <em>simulations</em> with realistic</p>
+<ol type="1">
+<li>population sizes,</li>
+<li>genomes,</li>
+<li>selective pressures,</li>
+<li>histories, and</li>
+<li>geography.</li>
+</ol>
+</div>
+</section><section id="section-7" class="slide level2" data-background-image="figs/oregon_geological_map.png">
+<h2></h2>
 <!-- Tree sequences -->
 </section></section>
 <section><section id="the-tree-sequence" class="title-slide slide level1"><h1>The tree sequence</h1></section><section id="history-is-a-sequence-of-trees" class="slide level2">
@@ -365,9 +393,12 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <div class="caption">
 <p>from <a href="https://www.biorxiv.org/content/10.1101/779132v1?rss=1">Ralph, Thornton and Kelleher 2019, <em>Efficiently summarizing relationships in large samples</em></a>, bioRxiv</p>
 </div>
-</section><section id="section-7" class="slide level2">
+</section><section id="section-8" class="slide level2">
 <h2></h2>
 <p><strong>What do genotypes tell us about the genealogies?</strong></p>
+<div class="caption">
+<p>also from <a href="https://www.biorxiv.org/content/10.1101/779132v1?rss=1">Ralph, Thornton and Kelleher 2019, <em>Efficiently summarizing relationships in large samples</em></a>, bioRxiv</p>
+</div>
 </section><section id="summaries-of-genotypes-and-genealogies" class="slide level2">
 <h2>Summaries of genotypes and genealogies</h2>
 <div class="columns">
@@ -378,7 +409,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <li>look at who has which alleles,</li>
 <li>and add a <em>summary</em> of these values to our running total.</li>
 </ol>
-<p><em>Example:</em> sequence divergence counts how many mutations differ between two sequences.</p>
+<p><em>Example:</em> genetic distance counts how many mutations differ between two sequences.</p>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:47%;">
@@ -408,13 +439,13 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <p><em>Example:</em> the mean time to most recent common ancestor between two sequences.</p>
 </div>
 </div>
-</section><section id="section-8" class="slide level2">
+</section><section id="section-9" class="slide level2">
 <h2></h2>
 <figure>
 <img data-src="figs/ts_ex/tree_sequence_site_and_branch.png" alt="site and branch stats" /><figcaption>site and branch stats</figcaption>
 </figure>
-</section><section id="math-moment-duality" class="slide level2">
-<h2>Math moment: duality</h2>
+</section><section id="duality" class="slide level2">
+<h2>Duality</h2>
 <p>Any set of <em>sample weights</em> <span class="math inline">\(w\)</span> and <em>summary function</em> <span class="math inline">\(f\)</span> defines both</p>
 <ul>
 <li>a statistic of genotypes, <span class="math inline">\(\text{Site}(f,w)\)</span>, and</li>
@@ -435,7 +466,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
     \E\left[\text{Branch}(f^2,w)\right]
 \end{equation}\]</span></p>
 </div>
-</section><section id="section-9" class="slide level2">
+</section><section id="section-10" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -446,6 +477,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <p>Duality, on 1000 Genomes data? Not quite…</p>
 <ul>
 <li>variation in mutation rate?</li>
+<li>biased gene conversion?</li>
 <li>selection?</li>
 <li>inference artifacts?</li>
 </ul>
@@ -455,7 +487,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </div>
 </div>
 </section></section>
-<section><section id="application-to-demographic-inference" class="title-slide slide level1"><h1>Application to demographic inference</h1></section><section id="section-10" class="slide level2">
+<section><section id="application-to-demographic-inference" class="title-slide slide level1"><h1>Application to demographic inference</h1></section><section id="section-11" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -471,7 +503,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </div>
 </div>
 </div>
-</section><section id="section-11" class="slide level2">
+</section><section id="section-12" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -517,9 +549,12 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <p>But, with a few tricks…</p>
 </div>
 </section><section id="a-100x-speedup" class="slide level2">
-<h2>A 100x speedup:</h2>
-<div class="centered">
-<p><img data-src="figs/slim_timing.png" style="width:100.0%" /></p>
+<h2>A 100x speedup!</h2>
+<!--
+{data-background-image="figs/slim_timing_no_msprime.png" data-background-size=40% data-background-position=left}
+-->
+<div class="floatright">
+<p><img data-src="figs/slim_timing_no_msprime.png" style="width:70.0%" /></p>
 </div>
 </section><section id="what-else-can-you-do-with-tree-sequences" class="slide level2">
 <h2>What else can you do with tree sequences?</h2>
@@ -557,7 +592,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <ul>
 <li><span class="math inline">\(N=10,000\)</span> diploids</li>
 <li>burn-in for <span class="math inline">\(10N\)</span> generations</li>
-<li><p>population split followed by period sampling, with:</p>
+<li><p>population split, with either:</p>
 <ul>
 <li>neutral</li>
 <li>background selection</li>
@@ -565,16 +600,41 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </ul></li>
 </ul>
 </div><div class="column" style="width:30%;">
+<div class="flushright">
 <p><img data-src="figs/murillo.jpeg" /></p>
+<div class="caption">
+<p>Murillo Rodrigues</p>
+</div>
+</div>
 </div>
 </div>
 </section><section class="slide level2">
 
 <p><img data-src="figs/aurantiacus/sim_results.png" /></p>
+<div class="flushright">
+<div class="caption">
+<p>From <em>Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers</em>, Sean Stankowski, Madeline A. Chase, Allison M. Fuiten, Murillo F. Rodrigues, Peter L. Ralph, and Matthew A. Streisfeld; PLoS Bio 2019.</p>
+</div>
+</div>
 </section></section>
-<section><section id="wrap-up" class="title-slide slide level1"><h1>Wrap-up</h1></section><section id="section-12" class="slide level2">
+<section><section id="wrap-up" class="title-slide slide level1"><h1>Wrap-up</h1></section><section id="section-13" class="slide level2">
 <h2></h2>
-<p>Thanks!!</p>
+<p>We need better understanding and prediction of how</p>
+<ol type="1">
+<li>genotype maps to phenotype,</li>
+<li>natural selection acts on phenotypes,</li>
+<li>and that affects genetic variation.</li>
+</ol>
+<p>To test theories and fit models, we need <em>simulations</em> with realistic</p>
+<ol type="1">
+<li>population sizes,</li>
+<li>genomes,</li>
+<li>selective pressures,</li>
+<li>histories, and</li>
+<li>geography.</li>
+</ol>
+</section><section id="section-14" class="slide level2" data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%">
+<h2></h2>
 </section></section>
 <section><section id="an-example-tree-sequence" class="title-slide slide level1"><h1>An example tree sequence</h1></section><section id="example-three-samples-two-trees-two-variant-sites" class="slide level2">
 <h2>Example: three samples; two trees; two variant sites</h2>
@@ -684,7 +744,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
         math: {
-          mathjax: '/usr/share/javascript/mathjax/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
